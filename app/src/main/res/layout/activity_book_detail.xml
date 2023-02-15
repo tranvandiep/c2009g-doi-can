@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp"
+    tools:context=".lesson02.BookDetailActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#F44336"
+        android:textSize="22dp"
+        android:text="Thong Tin Sach" />
+
+    <TextView
+        android:id="@+id/abd_bookname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ten sach: Lap Trinh C" />
+
+    <TextView
+        android:id="@+id/abd_authorname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tac gia: TRAN VAN A" />
+
+    <TextView
+        android:id="@+id/abd_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="100,000 VND" />
+
+    <Button
+        android:id="@+id/abd_edit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sua Noi Dung" />
+</LinearLayout>

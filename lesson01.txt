@@ -1,0 +1,17 @@
+Nôi dung kiến thức:
+	- Tìm hiểu về lifecycle trong Activity
+	- Thao tác nhiều activity
+	- Gửi dữ liệu qua lại giữa các activity
+	- ListView (Công nghệ cũ) -> RecyleView (Buổi học sau)
+	- Dialog
+==============================================================
+Ứng dụng quản lý sách:
+1) Hiển thị danh sách sách -> BookListActivity
+2) Chỉnh sửa sách -> BookEditActivity
+3) Chi tiết 1 quyển sách -> BookDetailActity
+
+Class Object: Book
+	Thuộc tính:
+		bookName
+		authorName
+		price
