@@ -15,3 +15,6 @@ Class Object: Book
 		bookName
 		authorName
 		price
+
+https://gokisoft.com/bai-tap-notes-application-huong-dan-chua-bai-tap-android-lap-tinh-android.html
+https://gokisoft.com/bt01-huong-dan-chua-bai-tap-android-lap-tinh-android.html
