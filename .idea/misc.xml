@@ -8,7 +8,10 @@
         <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/layout/activity_book_list.xml" value="0.33" />
         <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/layout/activity_new.xml" value="0.33" />
-        <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/layout/item_book.xml" value="0.33" />
+        <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/layout/item_book.xml" value="0.1" />
+        <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/layout/item_book_new.xml" value="0.33" />
+        <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/menu/menu_book.xml" value="0.36102564102564105" />
+        <entry key="..\:/Users/teacher/AndroidStudioProjects/C2009G/app/src/main/res/menu/menu_context_book.xml" value="0.36102564102564105" />
       </map>
     </option>
   </component>

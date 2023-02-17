@@ -13,6 +13,7 @@ import com.gokisoft.c2009g.R;
 public class BookEditorActivity extends AppCompatActivity implements View.OnClickListener{
     EditText bookNameTxt, authorNameTxt, priceTxt;
     Button cancelBtn, saveBtn;
+    int position = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class BookEditorActivity extends AppCompatActivity implements View.OnClic
         String bookname = getIntent().getStringExtra("bookname");
         String authorname = getIntent().getStringExtra("authorname");
         float price = getIntent().getFloatExtra("price", 0);
+        position = getIntent().getIntExtra("position", -1);
 
         bookNameTxt.setText(bookname);
         authorNameTxt.setText(authorname);
@@ -50,6 +52,7 @@ public class BookEditorActivity extends AppCompatActivity implements View.OnClic
             intent.putExtra("bookname", bookNameTxt.getText().toString());
             intent.putExtra("authorname", authorNameTxt.getText().toString());
             intent.putExtra("price", priceTxt.getText().toString());
+            intent.putExtra("position", position);
 
             setResult(1, intent);
 
