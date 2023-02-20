@@ -18,3 +18,32 @@ Class Object: Book
 
 https://gokisoft.com/bai-tap-notes-application-huong-dan-chua-bai-tap-android-lap-tinh-android.html
 https://gokisoft.com/bt01-huong-dan-chua-bai-tap-android-lap-tinh-android.html
+
+=================================================================
+Lesson#04
+Nội dung kiến thức:
+	- Dialog
+		-> Custome
+	- Lib, Framework, Engine, Services (Firebase: FCM, Realtime database, ...)
+	- Component:
+		Activity
+		Service
+		Content Provider
+		Broadcast/Receiver
+	- Lưu trữ dữ liệu: Content Provider -> FILE
+		- SharedPreferences -> Chỉ sử dụng để lưu cấu hình dự án
+		- Files -> File, photos, audio, video, ... -> cache data (large)
+			- Internal storage
+			- External storage
+		- CSDL -> Sqlite -> ???
+			- CRUD (ORM) -> Personal
+			- Libs -> ORM
+
+		Android:
+			Internal storage
+				-> Install app -> OS -> cap cho App 1 storage rieng
+				-> SharedPreferences, CSDL + Internal Files
+			External storage
+				-> Card -> Photo, audio, video, large files
+==================================================================================
+==================================================================================

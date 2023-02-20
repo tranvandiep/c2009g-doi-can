@@ -19,6 +19,10 @@ public class BookAdapter extends BaseAdapter {
         this.dataList = dataList;
     }
 
+    public void setDataList(List<Book> dataList) {
+        this.dataList = dataList;
+    }
+
     @Override
     public int getCount() {
         return dataList.size();
