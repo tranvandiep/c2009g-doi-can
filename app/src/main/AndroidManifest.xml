@@ -20,7 +20,7 @@
         android:theme="@style/Theme.C2009G"
         tools:targetApi="31">
         <activity
-            android:name=".lesson04.BookRecycleViewActivity"
+            android:name=".lesson04.BookDatabaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,18 +28,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".lesson04.BookRecycleViewActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".lesson04.BookActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".lesson02.BookListActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".lesson02.BookEditorActivity"
             android:exported="false" />

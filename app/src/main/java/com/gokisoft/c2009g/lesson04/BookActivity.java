@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -47,13 +48,26 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
+        DBHelper.getInstance(this);
+
+        //Fake data
+//        BookDAO.insert(new Book("LAP TRINH C", "TRAN VAN A", 100000));
+//        BookDAO.insert(new Book("SQL SERVER", "TRAN VAN B", 150000));
+//        BookDAO.insert(new Book("HTML/CSS/JS", "TRAN VAN C", 200000));
+
+        bookList = BookDAO.getList();
         listView = findViewById(R.id.ab_listview);
         adapter = new BookAdapter(this, bookList);
         listView.setAdapter(adapter);
 
         registerForContextMenu(listView);
 //        readSharedPreferences();
-        readFile();
+//        readFile();
+
+//        List<Book> dataList = BookDAO.getList();
+//        for(Book book:dataList) {
+//            Log.d(BookActivity.class.getName(), book.toString());
+//        }
     }
 
     @Override
@@ -161,7 +175,7 @@ public class BookActivity extends AppCompatActivity {
 //                saveSharedPreferences();
 
                 //Cach 2:
-                saveFile();
+//                saveFile();
             }
         });
     }
