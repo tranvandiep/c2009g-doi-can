@@ -47,3 +47,44 @@ Nội dung kiến thức:
 				-> Card -> Photo, audio, video, large files
 ==================================================================================
 ==================================================================================
+Nội dung kiên thức:
+	- Sqlite ~ CSDL (SQL Server, MySQL)
+	- CRUD:
+
+========================================================
+Mini App: Quản lý sách
+Phân tích:
+	Book:
+		_id: int primary auto_increment (identity) ~ autoincrement
+		book_name -> String
+		author_name -> String
+		price -> float
+	Chức năng:
+		Liệt kê/thêm/sửa/xóa -> Sách
+
+DB:
+
+create table books (
+	_id integer primary key autoincrement,
+	book_name varchar(250),
+	author_name varchar(250),
+	price float
+)
+
+Xay dung du an CSDL
+
+B1. Xay dung 1 ket noi toi CSDL
+B2. Xay dung CRUD (ORM)
+	- Truy van
+	- lay du lieu, them, sua, xoa, tim kiem ...
+B3. Ghep vao chuc nang trong du an
+
+
+R1 ~ werwerwerwe
+R2 ~ 4234234234
+R3 ~ 4234234234
+cursor -> R3 ~ 4234234234
+R3 ~ 4234234234
+R3 ~ 4234234234
+R3 ~ 4234234234
+R3 ~ 4234234234
