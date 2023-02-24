@@ -20,20 +20,27 @@
         android:theme="@style/Theme.C2009G"
         tools:targetApi="31">
         <activity
+            android:name=".TestActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".lesson04.BookDatabaseActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".lesson04.BookRecycleViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".lesson04.BookEditor2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".lesson04.BookActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".lesson04.BookRecycleViewActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".lesson04.BookActivity"
-            android:exported="true">
         </activity>
         <activity
             android:name=".lesson02.BookListActivity"

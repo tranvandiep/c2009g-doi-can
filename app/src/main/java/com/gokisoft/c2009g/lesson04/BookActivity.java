@@ -4,8 +4,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,10 +46,34 @@ public class BookActivity extends AppCompatActivity {
     BookAdapter adapter;
     int position = -1;
 
+    Button addBtn;
+
+    BroadcastReceiver myReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+
+            switch (action) {
+                case "ADD_NEW_BOOK":
+                    String bookName = intent.getStringExtra("bookName");
+                    String authorName = intent.getStringExtra("authorName");
+                    float price = intent.getFloatExtra("price", 0);
+                    Book book = new Book(bookName, authorName, price);
+
+                    bookList.add(book);
+                    adapter.notifyDataSetChanged();
+
+                    break;
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
+
+        addBtn = findViewById(R.id.ab_add_btn);
 
         DBHelper.getInstance(this);
 
@@ -68,6 +95,34 @@ public class BookActivity extends AppCompatActivity {
 //        for(Book book:dataList) {
 //            Log.d(BookActivity.class.getName(), book.toString());
 //        }
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BookActivity.this, BookEditor2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //Dang ky he thong
+        try {
+            IntentFilter filter = new IntentFilter();
+            filter.addAction("ADD_NEW_BOOK");
+            registerReceiver(myReceiver, filter);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        Log.d(BookActivity.class.getName(), "finish ....");
+        try {
+            unregisterReceiver(myReceiver);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

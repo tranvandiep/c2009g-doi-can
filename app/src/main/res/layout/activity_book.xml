@@ -8,6 +8,12 @@
     android:padding="6dp"
     tools:context=".lesson04.BookActivity">
 
+    <Button
+        android:id="@+id/ab_add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THEM SACH" />
+
     <ListView
         android:id="@+id/ab_listview"
         android:layout_width="match_parent"

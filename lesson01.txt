@@ -88,3 +88,25 @@ R3 ~ 4234234234
 R3 ~ 4234234234
 R3 ~ 4234234234
 R3 ~ 4234234234
+
+=============================================================================
+Nôi dung ASS:
+	- Activity -> Thao tác nhiều Activity
+	- Truyền dữ liệu qua lại giữa các Activity
+	- Menu Context
+	- ListView
+		- Menu Context
+		- SQL (Danh sách, thêm, sửa, xóa)
+	- Dialog (Custome + Default)
+	- Package id trong 1 dự án
+	- Icon của dự án
+=============================================================
+Nội dung kiến thức:
+	Components
+		- Activity <-> Multi Activity
+		- Service <-> Multi Service
+
+		- Trao doi thong tin:
+			- Broadcast/Receiver -> ???
+			- AIDL -> security
+			- Hadler message (post message)
