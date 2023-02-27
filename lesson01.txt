@@ -110,3 +110,26 @@ Nội dung kiến thức:
 			- Broadcast/Receiver -> ???
 			- AIDL -> security
 			- Hadler message (post message)
+===============================================================
+Nội dung kiến thức:
+	Services:
+		- Lifecycle
+		- cách sử dụng
+	Threads trong Android:
+		Services
+			-> Ton tai toi khi nao chung ta huy no.
+			-> Ko the update UI -> trao doi du lieu -> update UI -> error -> sync UI -> update UI
+		AsyncTask
+			-> Thread
+			-> tach 2 thread: background & UI -> async UI -> update UI
+
+			Thread Pool -> max: 1 -> 5
+
+			new AsyncTask -> N lan -> 1 thread
+		Thread
+			-> run() -> Xu ly xong code -> stop
+			-> Update UI -> error -> sync UI
+
+			new Thread() -> tao ra bay nhieu Thread -> N
+=============================================
+Viết 1 ứng dụng tải file từ trên mạng -> Kiếm 1 file dung lượng lớn.
