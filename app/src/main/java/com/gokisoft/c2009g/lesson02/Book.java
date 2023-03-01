@@ -7,8 +7,15 @@ public class Book {
     String bookName;
     String authorName;
     float price;
+    String thumbnail;
 
     public Book() {
+    }
+
+    public Book(String bookName, float price, String thumbnail) {
+        this.bookName = bookName;
+        this.price = price;
+        this.thumbnail = thumbnail;
     }
 
     public Book(String bookName, String authorName, float price) {

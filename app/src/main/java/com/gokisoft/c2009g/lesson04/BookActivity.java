@@ -39,6 +39,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class BookActivity extends AppCompatActivity {
     List<Book> bookList = new ArrayList<>();
 
@@ -82,7 +86,8 @@ public class BookActivity extends AppCompatActivity {
 //        BookDAO.insert(new Book("SQL SERVER", "TRAN VAN B", 150000));
 //        BookDAO.insert(new Book("HTML/CSS/JS", "TRAN VAN C", 200000));
 
-        bookList = BookDAO.getList();
+//        bookList = BookDAO.getList();
+        bookList = new ArrayList<>();
         listView = findViewById(R.id.ab_listview);
         adapter = new BookAdapter(this, bookList);
         listView.setAdapter(adapter);
@@ -112,6 +117,39 @@ public class BookActivity extends AppCompatActivity {
         } catch(Exception e) {
             e.printStackTrace();
         }
+
+        loadDataFromAPI();
+    }
+
+    void loadDataFromAPI() {
+        final String API_BOOK_LIST = "https://gokisoft.com/api/fake/49/book/list";
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder()
+                        .url(API_BOOK_LIST)
+                        .build();
+
+                try (Response response = client.newCall(request).execute()) {
+                    String content = response.body().string();
+                    Type baseType = new TypeToken<List<Book>>() {}.getType();
+                    Gson gson = new Gson();
+                    bookList = gson.fromJson(content, baseType);
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            adapter.setDataList(bookList);
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     @Override
