@@ -184,30 +184,7 @@ public class BookActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v,
-                                    ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_context_book, menu);
-    }
 
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-
-        position = info.position;
-
-        switch (item.getItemId()) {
-            case R.id.menu_book_edit:
-
-                break;
-            case R.id.menu_book_delete:
-                showDialogDeleteBook();
-                break;
-        }
-        return super.onContextItemSelected(item);
-    }
 
     void showDialogDeleteBook() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -215,7 +192,30 @@ public class BookActivity extends AppCompatActivity {
         alertDialog.setTitle("XOA SACH")
                 .setMessage("Ban chac chan muon xoa sach nay khong")
                 .setPositiveButton("Xoa", new DialogInterface.OnClickListener() {
+                    @Override@Override
+                    public void onCreateContextMenu(ContextMenu menu, View v,
+                                                    ContextMenu.ContextMenuInfo menuInfo) {
+                        super.onCreateContextMenu(menu, v, menuInfo);
+                        MenuInflater inflater = getMenuInflater();
+                        inflater.inflate(R.menu.menu_context_book, menu);
+                    }
+
                     @Override
+                    public boolean onContextItemSelected(MenuItem item) {
+                        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+                        position = info.position;
+
+                        switch (item.getItemId()) {
+                            case R.id.menu_book_edit:
+
+                                break;
+                            case R.id.menu_book_delete:
+                                showDialogDeleteBook();
+                                break;
+                        }
+                        return super.onContextItemSelected(item);
+                    }
                     public void onClick(DialogInterface dialogInterface, int i) {
                         bookList.remove(position);
                         adapter.notifyDataSetChanged();
